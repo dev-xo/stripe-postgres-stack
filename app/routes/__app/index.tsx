@@ -53,7 +53,7 @@ export default function AppIndexRoute() {
 				<div className="m-3" />
 
 				<a
-					href="https://github.com/dev-xo/stripe-stack"
+					href="https://github.com/dev-xo/stripe-postgres-stack"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="flex flex-row items-center text-lg font-semibold text-[#8469e6] drop-shadow-sm 
