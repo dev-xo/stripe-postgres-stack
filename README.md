@@ -40,7 +40,7 @@ Learn more about [Remix Stacks](https://remix.run/stacks).
 
 ```sh
 # Initialize the following template into your workspace:
-npx create-remix --template dev-xo/barebones-postgres-stack
+npx create-remix --template dev-xo/stripe-postgres-stack
 
 # Setup database: (Choose between the following 2 options)
 npm run docker || 'Manually set your Postgres database keys into the .env file.'
