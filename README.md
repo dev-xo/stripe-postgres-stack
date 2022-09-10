@@ -39,8 +39,21 @@ Learn more about [Remix Stacks](https://remix.run/stacks).
 ## 🔋 Quickstart
 
 ```sh
-# Initialize the following template in your workspace:
-npx create-remix --template dev-xo/stripe-postgres-stack
+# Initialize the following template into your workspace:
+npx create-remix --template dev-xo/barebones-postgres-stack
+
+# Setup database: (Choose between the following 2 options)
+npm run docker || 'Manually set your Postgres database keys into the .env file.'
+```
+
+> **Note:** The npm script will complete while Docker sets up the container in the background. Ensure that Docker has finished and your container is running before proceeding.
+
+```sh
+# Seed your database:
+npm run setup
+
+# Build your server:
+npm run build
 
 # Start dev server:
 npm run dev
