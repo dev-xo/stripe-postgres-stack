@@ -14,7 +14,7 @@
 
 - [Fly app Deployment](https://fly.io) with [Docker.](https://www.docker.com/products/docker-desktop/)
 - Database ORM with [Prisma.](https://www.prisma.io/)
-- Production-Ready with [SQLite Database.](https://sqlite.org/index.html)
+- Production-Ready with [PostgreSQL Database](https://www.postgresql.org/)
 - [GitHub Actions](https://github.com/features/actions) for Deploy on merge to Production and Staging environments.
 - Healthcheck endpoint for [Fly backups Region Fallbacks.](https://fly.io/docs/reference/configuration/#services-http_checks)
 - Styling with [Tailwind.css](https://tailwindcss.com/) + [Tailwind Prettier-Plugin.](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
