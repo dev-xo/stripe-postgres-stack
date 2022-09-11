@@ -45,8 +45,8 @@ export default function LoginRoute() {
 				{/* Google. */}
 				<SocialButton
 					provider={SocialsProvider.GOOGLE}
-					className="relative flex h-14 w-full flex-row items-center justify-center rounded-xl 
-        bg-[#4285f4] text-base font-bold text-white shadow-md transition hover:scale-105 active:scale-100">
+					className="relative flex h-14 w-full flex-row items-center justify-center rounded-xl
+					bg-[#4285f4] text-base font-bold text-white shadow-md transition hover:scale-105 active:scale-100">
 					<svg
 						className="absolute left-6 h-6 w-6 fill-white"
 						viewBox="0 0 24 24"
@@ -61,8 +61,8 @@ export default function LoginRoute() {
 				{/* Twitter. */}
 				<SocialButton
 					provider="twitter"
-					className="relative flex h-14 w-full flex-row items-center justify-center rounded-xl 
-        bg-[#1da1f2] text-base font-bold text-white shadow-md transition hover:scale-105 active:scale-100">
+					className="relative flex h-14 w-full flex-row items-center justify-center rounded-xl
+					bg-[#1da1f2] text-base font-bold text-white shadow-md transition hover:scale-105 active:scale-100">
 					<svg
 						className="absolute left-6 h-6 w-6 fill-white"
 						viewBox="0 0 24 24"
@@ -77,8 +77,8 @@ export default function LoginRoute() {
 				{/* Discord. */}
 				<SocialButton
 					provider={SocialsProvider.DISCORD}
-					className="relative flex h-14 w-full flex-row items-center justify-center rounded-xl 
-				bg-[#7289da] text-base font-bold text-white shadow-md transition hover:scale-105 active:scale-100">
+					className="relative flex h-14 w-full flex-row items-center justify-center rounded-xl
+					bg-[#7289da] text-base font-bold text-white shadow-md transition hover:scale-105 active:scale-100">
 					<svg
 						className="absolute left-6 h-6 w-6 fill-white"
 						viewBox="0 0 24 24"
@@ -93,8 +93,8 @@ export default function LoginRoute() {
 				{/* Github. */}
 				<SocialButton
 					provider={SocialsProvider.GITHUB}
-					className="relative flex h-14 w-full flex-row items-center justify-center rounded-xl 
-				bg-[#2b3137] text-base font-bold text-white shadow-md transition hover:scale-105 active:scale-100">
+					className="relative flex h-14 w-full flex-row items-center justify-center rounded-xl
+					bg-[#2b3137] text-base font-bold text-white shadow-md transition hover:scale-105 active:scale-100">
 					<svg
 						className="absolute left-6 h-6 w-6 fill-white"
 						viewBox="0 0 24 24"
@@ -113,11 +113,9 @@ export default function LoginRoute() {
 				{/* Example Privacy Message. */}
 				<p className="text-center text-xs font-semibold text-slate-500 dark:text-slate-400">
 					By clicking “Continue" you acknowledge that this is a{' '}
-					<a
-						href="/"
-						className="font-bold text-slate-900 hover:opacity-60 dark:text-slate-100">
+					<span className="font-bold text-slate-900 hover:opacity-60 dark:text-slate-100">
 						simple demo
-					</a>
+					</span>
 					, and you are free to use it in the way you like.
 				</p>
 			</div>
