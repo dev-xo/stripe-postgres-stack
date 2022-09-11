@@ -204,7 +204,6 @@ fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app stripe-postgres-sta
 fly postgres create --name stripe-postgres-stack-db
 fly postgres attach stripe-postgres-stack-db
 
-
 fly postgres create --name stripe-postgres-stack-staging-db
 fly postgres attach stripe-postgres-stack-staging-db
 ```
