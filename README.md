@@ -61,7 +61,7 @@ npm run build
 npm run dev
 ```
 
-Done! This starts your app in development mode, rebuilding assets on file changes.<br />
+Done! This starts your app in development mode, rebuilding assets on file changes.
 
 ## 👋 Getting Started
 
@@ -210,6 +210,8 @@ fly postgres create --name stripe-postgres-stack-staging-db
 fly postgres attach stripe-postgres-stack-staging-db
 ```
 
+> Fly will take care of setting the `DATABASE_URL` secret for you.
+
 - Now that everything is set up you can **commit and push** your changes to your repo.
 
 > Every commit to your `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
@@ -260,18 +262,18 @@ Also feel free to update prettier settings from `.package-json` with your prefer
 
 ## 🤝 Contributing
 
-Contributions are Welcome! Feel free to help us improve and update this Community Template over time!
+Contributions are Welcome! Jump in and help us improve this Community Template over time!
 
 - [Contributing Guide](https://github.com/dev-xo/stripe-stack/blob/main/CONTRIBUTING.md) Docs.
-- [Open Project Roadmap](https://github.com/users/dev-xo/projects/5) Check our TODOs, Updates and template maintenance.
+- [Open Project Roadmap](https://github.com/users/dev-xo/projects/5) Check template TODOs, fixes and updates.
 
 ## 🍪 Support
 
-If you found this template useful, feel free to support it with a ⭐ [Star](https://github.com/dev-xo/stripe-postgres-stack)!
+If you found this template useful, help us by [Staring ⭐ It](https://github.com/dev-xo/stripe-postgres-stack)!
 It helps a lot and gives me motivation to keep working on this and other Remix projects for the community. Thanks!
 
 ### ▫️ Acknowledgments
 
 All my respect and gratitude for Kent C. Dodds _(Not gonna @him, don't wanna bother, instead gonna leave here his [Website Blog](https://kentcdodds.com/))_. From day 1 him has been supporting my work for the community on Twitter and that's something amazing for a small developer like me, and some others.
 
-Also a big shout out to [@vueeez](https://github.com/vueeez) who just jumped in on Twitter MDs, and contributed to the template, helping me implementing Twitter Authentication Strategy and so on.
+Also a big shout out to [@vueeez](https://github.com/vueeez) who just jumped in on Twitter DMs, and contributed to the template, helping me implementing Twitter Authentication Strategy.
