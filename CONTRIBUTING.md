@@ -12,4 +12,4 @@ To get an overview of the project, read the [README](README.md). Here are some r
 
 ## Open Roadmap - Project
 
-We have an [Open Roadmap Project](https://github.com/users/dev-xo/projects/5) that will be updated with new Features, Fixes and so on.
+Check our [Public Project Roadmap](https://github.com/users/dev-xo/projects/5)
