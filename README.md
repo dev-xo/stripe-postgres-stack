@@ -5,7 +5,7 @@
   <p align="center">
     <a href="https://stripe-postgres-stack.fly.dev">Live Demo</a>
     ·
-    <a href="https://twitter.com/DanielKanem">Twitter</a>
+    <a href="https://twitter.com/DEV_XO1">Twitter</a>
     <br/>
       An open source Remix Stack that integrates Stripe Subscriptions, Social Authentication, Testing and a few more features. PostgreSQL version. Deploys to Fly.io
   </p>
