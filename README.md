@@ -177,7 +177,7 @@ We use [Prettier](https://prettier.io/) for auto-formatting in this project. It'
 
 This template has pre-configured prettier settings on `.package-json`. Feel free to update each value with your preferred work style.
 
-## 👥 Contributing
+## Contributing
 
 Contributions are Welcome! Jump in and help us improve this Community Template over time!
 
