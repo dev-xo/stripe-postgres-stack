@@ -11,7 +11,11 @@
   </p>
 </p>
 
-## 💿 Features
+## Features
+
+Stripe PostgreSQL Stack has been built on top of [Barebones PostgreSQL Stack](https://github.com/dev-xo/barebones-postgres-stack), including all its base features.
+
+### Base Features
 
 - [Fly app Deployment](https://fly.io) with [Docker.](https://www.docker.com/products/docker-desktop/)
 - Database ORM with [Prisma.](https://www.prisma.io/)
@@ -26,7 +30,7 @@
 - Code formatting with [Prettier.](https://prettier.io/)
 - Static Types with [TypeScript.](https://www.typescriptlang.org/)
 
-### Special Stack Features
+### Implemented Features
 
 - Authentication Ready with [Remix-Auth](https://www.npmjs.com/package/remix-auth) and [Socials](https://www.npmjs.com/package/remix-auth-socials) + [Twitter](https://github.com/na2hiro/remix-auth-twitter) Strategies.
 - [Stripe Subscriptions](https://stripe.com/) with Support for multiple plans, [Upgrade / Downgrade](https://stripe.com/docs/billing/subscriptions/change) and [Customer Portal.](https://stripe.com/docs/billing/subscriptions/integrating-customer-portal)
@@ -37,67 +41,61 @@
 Would you like to change something? Fork it, change it and use `npx create-remix --template your/repo`!<br/>
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
-## ⚡️ Quickstart
+## Quickstart
+
+To get started, run the following commands in your console:
 
 ```sh
-# Initialize the following template into your workspace:
+# Initializes template in your workspace:
 npx create-remix --template dev-xo/stripe-postgres-stack
 
-# Setup database: (Choose between the following 2 options)
+# Setups database: (Choose between the following 2 options)
 npm run docker || 'Manually set your Postgres database Key into the .env file.'
 ```
 
 > **Note:** The npm script will complete while Docker sets up the container in the background. Ensure that Docker has finished and your container is running before proceeding.
 
 ```sh
-# Start dev server:
+# Starts dev server:
 npm run dev
 ```
 
-Done! This starts your app in development mode, rebuilding assets on file changes.
+> Note: Cloning the repository instead of initializing it with the above commands, will result in a inappropriate experience. This template uses `remix.init` to configure itself and prepare your environment.
 
-## 👋 Getting Started
+## Getting Started
 
-This section will be splitted into three quick threads: **Live Demo | Development | Production**.
+The following section will be splitted into three threads: **Live Demo**, **Development** and **Production**.
 
 ### Live Demo
 
-Template's Demo has been developed to be really simple to use, being able to show all its provided features. Let's see the workflow to test it:
+Template's Demo has been developed to be really simple to test, being able to show all its provided features. Here is a basic workflow you can follow to test it:
 
-- Log In with your preferred Social.
+1. Log in with your preferred Social Authenticator.
+2. Select a Subscription Plan.
+3. Fill Stripe Checkout inputs with default development values. _(Check Notes)_
+4. You should be redirected back to the app with selected Stripe Plan already set.
 
-  > Feel free to remove the authorized App after testing it.
-
-- Select a Subscription Plan.
-
-  > Besides you will see real money values from Stripe Checkout, don't worry, it's absolutely safe.
-
-- Fill Stripe Checkout inputs with default development values.
-
-  > Type `4242` as much times as you can on each available Input.
-
-- Done! We should be redirected back to our App with newly Plan already set.
-  <br />
+> Notes: Stripe test mode uses the following number: `4242` as valid values for Card Information. Type it on each available input to successfully complete Checkout step.
 
 ### Development
 
 Understanding our development workspace will keep us productive.
 
-### ▫️ Folder Structure
+### Folder Structure
 
-A solid folder structure will help our App grow healthy over time. Let's review the most important folders.
+Let's review some of template's important folders:
 
-    ├── modules         # Groups our App logic and splits it into smaller sections.
-      ├──                 Stores related Components, Database interactions, Sessions, Utils etc.
-      ├──                 This folder could also be called "lib", "services" etc.
+    ├── modules         # Groups our app logic and splits it into smaller sections.
+      ├──                 Stores related components, database interactions, sessions, utils etc.
+      ├──                 This folder could also be called "lib" or "services".
 
     ├── routes
       ├── api           # Stores Stripe Webhook Endpoint file, and any realted API calls.
-      ├── resources     # Used to call our own Server, do Redirects, update Sessions and so on.
+      ├── resources     # Used to call our own server, do redirects, update sessions and so on.
 
-### ▫️ Authentication Strategies
+### Authentication Strategies
 
-To provide Authentication to our App, we will need to get the API Keys from our Socials Providers.
+To provide authentication to our app, we will need to get the API Keys from our Socials Providers.
 Below here you can find all template's Providers OAuth Documentations.
 
 - [Google OAuth](https://developers.google.com/identity/protocols/oauth2)
@@ -105,129 +103,55 @@ Below here you can find all template's Providers OAuth Documentations.
 - [Github OAuth](https://docs.github.com/es/developers/apps/building-oauth-apps/authorizing-oauth-apps)
 - [Discord OAuth](https://discord.com/developers/docs/topics/oauth2)
 
-Once we got our Providers API Keys, we can set them into `.env` file.
+Once you've got the Providers API Keys, set them into template's `.env` file.
 
-> If you are struggling on this step, feel free to contact me directly, have a look on youtube, or do a quick search on Google!.
+> If you are struggling on this step, feel free to contact me directly, have a look on youtube, or do a quick search on Google.
 
-### ▫️ Stripe Webhook
+### Stripe Webhook - Development
 
 Let's see how we can start receiving Stripe Events to our Webhook Endpoint.
 
-- Install [Stripe CLI](https://stripe.com/docs/stripe-cli)
-
-- Keep the following command running in the background:
+1. Install [Stripe CLI](https://stripe.com/docs/stripe-cli)
+2. Keep the following command running on the background:
 
 ```sh
 stripe listen --forward-to localhost:3000/api/webhook
 ```
 
-The provided `Webhook Signing Secret` from the above command, has to be set in our `.env` file as `DEV_STRIPE_WEBHOOK_ENDPOINT_SECRET`.
+3. The provided `Webhook Signing Secret` from the above command, has to be set in our `.env` file as `DEV_STRIPE_WEBHOOK_ENDPOINT_SECRET`.
 
-### ▫️ Stripe Products
+### Stripe Products
 
 From [Stripe Products](https://dashboard.stripe.com/test/products) Dashboard, create as many products as you want. Remember to update their API Keys from `.env` file, as well as their descriptions from `/modules/stripe/stripe-plans`.
 
 ### Production
 
-### ▫️ Stripe Webhook - Web Dashboard
+### Stripe Webhook - Production
 
 Let's see how we can get and set our Production Webhook.
 
-- Visit [Webhooks](https://dashboard.stripe.com/test/webhooks) Section into your Stripe Dashboard.
+1. Visit [Webhooks](https://dashboard.stripe.com/test/webhooks) section from your Stripe Dashboard.
+2. Create a new Webhook Endpoint.
+3. Set your deployed app Webhook Endpoint URL into `Endpoint URL` input. _(Check Notes)_
+4. Reveal the `Signing Secret` value that has been provided from Stripe Webhook page and set it as `PROD_STRIPE_WEBHOOK_ENDPOINT_SECRET` in template's `.env` file.
 
-> The link provided to Webhooks its from Stripe Test Mode. Feel free to complete the "Activate Payments" steps to get a production Webhook Key.
+> Notes: This is an example of a Deployed Webhook Endpoint URL: https://stripe-postgres-stack.fly.dev/api/webhook
 
-- Create a new Webhook Endpoint.
+## Deployment
 
-- Set your deployed App Webhook Endpoint URL into `Endpoint URL` input.
+Stripe Stack its composed of two templates variants: SQLite and PostgreSQL. In order to keep a better track and an easier maintenance of each repository documentation, deployment section has been moved to its own file.
 
-> For this template was: https://stripe-postgres-stack.fly.dev/api/webhook
+Check [PostgreSQL DEPLOYMENT.md](https://github.com/dev-xo/dev-xo/blob/main/stripe-stack/docs/POSTGRESQL-DEPLOYMENT.md) to get your app to production.
 
-- Reveal the `Signing Secret` value that has been provided from Stripe Webhook page and set it as `PROD_STRIPE_WEBHOOK_ENDPOINT_SECRET` in our `.env` file.
-
-> Done! Give it a try. If something went wrong, verify that all the steps has been followed correctly.
-
-## 🚀 Deployment
-
-This Remix Stack comes with two GitHub Actions that handle automatically deploying our app to Production and Staging Environments.
-
-Prior to the first deployment, we'll need to do a few things:
-
-- [Install Fly](https://fly.io/docs/getting-started/installing-flyctl/)
-
-- Sign up and Log in to Fly:
-
-```sh
-fly auth signup
-```
-
-- Create two apps on Fly, one for staging and one for production:
-
-```sh
-fly apps create stripe-postgres-stack
-fly apps create stripe-postgres-stack-staging
-```
-
-> Make sure this name matches the `app` set into `fly.toml` file. Otherwise, you will not be able to deploy.
-
-- Initialize Git:
-
-```sh
-git init
-```
-
-- Create a new [GitHub Repository](https://repo.new), and then add it as the remote for your project. **Do not push your app yet!**
-
-```sh
-git remote add origin <ORIGIN_URL>
-```
-
-- Add a `FLY_API_TOKEN` to your GitHub repo. To do this, go to your user settings on Fly and create a new [token](https://web.fly.io/user/personal_access_tokens/new), then add it to [your repo secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets) with the name `FLY_API_TOKEN`.
-
-- Add a `SESSION_SECRET` to your fly app secrets, to do this you can run the following commands:
-
-```sh
-fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app stripe-postgres-stack
-fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app stripe-postgres-stack-staging
-```
-
-> If you don't have openssl installed, you can also use [1password](https://1password.com/password-generator/) to generate a random secret, just replace `$(openssl rand -hex 32)` with the generated secret.
-
-- Create a database for both your staging and production environments. Run the following:
-
-```sh
-fly postgres create --name stripe-postgres-stack-db
-fly postgres attach stripe-postgres-stack-db
-
-fly postgres create --name stripe-postgres-stack-staging-db
-fly postgres attach stripe-postgres-stack-staging-db
-```
-
-> Fly will take care of setting the `DATABASE_URL` secret for you.
-
-- Now that everything is set up you can **commit and push** your changes to your repo.
-
-> Every commit to your `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
-
-### ▫️ Setting Up Production Envs
-
-Here is a simple command we can use after deployment. Fill it with the required App `.env` variables.
-
-```sh
-flyctl secrets set NODE_ENV=production PROD_HOST_URL= GOOGLE_CLIENT_ID= GOOGLE_CLIENT_SECRET= GITHUB_CLIENT_ID= GITHUB_CLIENT_SECRET= TWITTER_CLIENT_ID= TWITTER_CLIENT_SECRET= DISCORD_CLIENT_ID= DISCORD_CLIENT_SECRET= STRIPE_PUBLIC_KEY= STRIPE_SECRET_KEY= PLAN_1_PRICE_ID= PLAN_2_PRICE_ID= PLAN_3_PRICE_ID= PROD_STRIPE_WEBHOOK_ENDPOINT_SECRET=
-```
-
-> Development variables has opted out from this command.
-
-## ⚙️ GitHub Actions
+## GitHub Actions
 
 We use GitHub Actions for continuous integration and deployment.<br/><br/>
-Anything that gets into the `main` branch will be deployed to production after running tests / build / etc.<br/>
+Anything that gets into the `main` branch will be deployed to production after running tests, build, etc.<br/>
 Anything in the `dev` branch will be deployed to staging.
 
-## 🧩 Testing
+## Testing
 
-### ▫️ Cypress
+### Cypress
 
 We use Cypress for End-to-End tests. You'll find those in the `cypress` directory. As you make changes, add to an existing file or create a new file in the `cypress/e2e` directory to test your changes.
 
@@ -235,37 +159,37 @@ We use [`@testing-library/cypress`](https://testing-library.com/cypress) for sel
 
 To run these tests in development, run `npm run test:e2e:dev` which will start the dev server for the app as well as the Cypress client. Make sure the database is running in docker as described above.
 
-### ▫️ Vitest
+### Vitest
 
 For lower level tests of utilities and individual components, we use `vitest`. We have DOM-specific assertion helpers via [`@testing-library/jest-dom`](https://testing-library.com/jest-dom).
 
-### ▫️ Type Checking
+### Type Checking
 
 This project uses TypeScript. It's recommended to get TypeScript set up for your editor to get a really great in-editor experience with type checking and auto-complete. To run type checking across the whole project, run `npm run typecheck`.
 
-### ▫️ Linting
+### Linting
 
 This project uses ESLint for linting. That is configured in `.eslintrc.js`.
 
-### ▫️ Formatting
+### Formatting
 
 We use [Prettier](https://prettier.io/) for auto-formatting in this project. It's recommended to install an editor plugin to get auto-formatting on save. There's also a `npm run format` script you can run to format all files in the project.
 
-Also feel free to update prettier settings from `.package-json` with your preferred configuration.
+This template has pre-configured prettier settings on `.package-json`. Feel free to update each value with your preferred work style.
 
 ## 👥 Contributing
 
 Contributions are Welcome! Jump in and help us improve this Community Template over time!
 
 - [Contributing Guide](https://github.com/dev-xo/stripe-stack/blob/main/CONTRIBUTING.md) Docs.
-- [Public Project Roadmap](https://github.com/users/dev-xo/projects/5) Check our TODOs, Fixes and Updates.
+- [Public Project Roadmap](https://github.com/users/dev-xo/projects/5) Check template's TODOs, fixes and updates.
 
-## 🍪 Support
+## Support
 
-If you found the template useful, feel free to [Star ⭐ It](https://github.com/dev-xo/stripe-postgres-stack)!
+If you found the template useful, support it with a [Star ⭐](https://github.com/dev-xo/stripe-postgres-stack)<br />
 It helps the repository grow and gives me motivation to keep working on it. Thanks you!
 
-### ▫️ Acknowledgments
+### Acknowledgments
 
 Big thanks to Kent C. Dodds _(Not gonna bother @him tagging, instead gonna leave here his [Website](https://kentcdodds.com/))_. Him has supported some of my work on Twitter a few times already, and that's something truly amazing for any small developer.
 
