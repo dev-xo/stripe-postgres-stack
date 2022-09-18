@@ -10,6 +10,7 @@
 		"dev:css": "npm run generate:css -- --watch",
 		"dev:remix": "cross-env NODE_ENV=development binode --require ./mocks -- @remix-run/dev:remix dev",
 		"generate:css": "tailwindcss -i ./app/styles/app.css -o ./app/styles/tailwind.css",
+		"docker": "docker-compose up -d",
 		"setup": "run-s setup:db setup:seed",
 		"setup:db": "prisma generate && prisma migrate deploy",
 		"setup:seed": "prisma db seed",
