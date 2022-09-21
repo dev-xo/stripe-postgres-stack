@@ -44,14 +44,14 @@ export const meta: MetaFunction = () => {
 		'og:image':
 			'https://raw.githubusercontent.com/dev-xo/dev-xo/main/stripe-stack/assets/images/dark-thumbnail.png',
 		'og:card': 'summary_large_image',
-		'og:creator': '@DEV_XO1',
+		'og:creator': '@DanielKanem',
 		'og:site': 'https://stripe-postgres-stack.fly.dev',
 		'og:description':
 			'An open source Remix Stack that integrates Stripe Subscriptions, Social Authentication, Testing and a few more features. PostgreSQL version. Deploys to Fly.io',
 		'twitter:image':
 			'https://raw.githubusercontent.com/dev-xo/dev-xo/main/stripe-stack/assets/images/dark-thumbnail.png',
 		'twitter:card': 'summary_large_image',
-		'twitter:creator': '@DEV_XO1',
+		'twitter:creator': '@DanielKanem',
 		'twitter:title': 'Remix Stripe Stack',
 		'twitter:description':
 			'An open source Remix Stack that integrates Stripe Subscriptions, Social Authentication, Testing and a few more features. PostgreSQL version. Deploys to Fly.io ',
