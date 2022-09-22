@@ -42,14 +42,14 @@ export const meta: MetaFunction = () => {
 		'og:type': 'website',
 		'og:url': 'https://stripe-postgres-stack.fly.dev',
 		'og:image':
-			'https://raw.githubusercontent.com/dev-xo/dev-xo/main/stripe-stack/assets/images/dark-thumbnail.png',
+			'https://raw.githubusercontent.com/dev-xo/dev-xo/main/stripe-stack/assets/images/thumbnail-postgres-v2.png',
 		'og:card': 'summary_large_image',
 		'og:creator': '@DanielKanem',
 		'og:site': 'https://stripe-postgres-stack.fly.dev',
 		'og:description':
 			'An open source Remix Stack that integrates Stripe Subscriptions, Social Authentication, Testing and a few more features. PostgreSQL version. Deploys to Fly.io',
 		'twitter:image':
-			'https://raw.githubusercontent.com/dev-xo/dev-xo/main/stripe-stack/assets/images/dark-thumbnail.png',
+			'https://raw.githubusercontent.com/dev-xo/dev-xo/main/stripe-stack/assets/images/thumbnail-postgres-v2.png',
 		'twitter:card': 'summary_large_image',
 		'twitter:creator': '@DanielKanem',
 		'twitter:title': 'Remix Stripe Stack',
