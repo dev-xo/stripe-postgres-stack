@@ -45,7 +45,7 @@ To get started, run the following commands in your console:
 
 ```sh
 # Initializes template in your workspace:
-npx create-remix@latest  --template dev-xo/stripe-postgres-stack
+npx create-remix@latest --template dev-xo/stripe-postgres-stack
 
 # Setups database: (Choose between the following 2 options)
 npm run docker || 'Manually set your Postgres database Key into the .env file.'
