@@ -5,9 +5,12 @@
   <p align="center">
     <a href="https://stripe-postgres-stack.fly.dev">Live Demo</a>
     ·
+    <a href="https://github.com/dev-xo/dev-xo/blob/main/stripe-stack/docs/POSTGRESQL-DEPLOYMENT.md">Deployment Documentation</a>
+    ·
     <a href="https://twitter.com/DanielKanem">Twitter</a>
     <br/>
-      An Open Source Remix template that integrates Stripe Subscriptions, Social Authentication, Testing and a few more features. PostgreSQL version. Deploys to Fly.io
+    <br/>
+    An Open Source Remix template that integrates Stripe Subscriptions, Social Authentication, Testing and a few more features. PostgreSQL version. Deploys to Fly.io
   </p>
 </p>
 
@@ -49,7 +52,7 @@ To get started, run the following commands in your console:
 npx create-remix@latest --template dev-xo/stripe-postgres-stack
 
 # Setups database: (Choose between the following 2 options)
-npm run docker || 'Manually set your Postgres database Key into the .env file.'
+npm run docker || 'Manually set your Postgres database Keys into .env file.'
 ```
 
 > **Note:** The npm script will complete while Docker sets up the container in the background. Ensure that Docker has finished and your container is running before proceeding.
@@ -63,18 +66,18 @@ npm run dev
 
 ## Getting Started
 
-The following section will be splitted into three threads: **Live Demo**, **Development** and **Production**.
+The following section will be splitted into three quick threads: **Live Demo**, **Development** and **Production**.
 
 ### Live Demo
 
-Template's Demo has been developed to be really simple to test, being able to show all its provided features. Here is a basic workflow you can follow to test it:
+Template's Demo has been built to be really simple to test, being able to show all its provided features. Here is a basic workflow we can follow to test it:
 
 1. Log in with your preferred Social Authenticator.
 2. Select a Subscription Plan.
 3. Fill Stripe Checkout inputs with default development values. _(Check Notes)_
 4. You should be redirected back to the app with selected Stripe Plan already set.
 
-> Notes: Stripe test mode uses the following number: `4242` as valid values for Card Information. Type it on each available input to successfully complete Checkout step.
+> Notes: Stripe test mode uses the following number: `4242` as valid values for Card Information. Type it as much times as you can on each available input to successfully complete Checkout step.
 
 ### Development
 
@@ -84,13 +87,13 @@ Understanding our development workspace will keep us productive.
 
 Let's review some of template's important folders:
 
-    ├── modules         # Groups our app logic and splits it into smaller sections.
-      ├──                 Stores related components, database interactions, sessions, utils etc.
+    ├── modules         # Groups app logic and splits it into smaller sections.
+      ├──                 Stores related components, database interactions, configs, utils etc.
       ├──                 This folder could also be called "lib" or "services".
 
     ├── routes
       ├── api           # Stores Stripe Webhook Endpoint file, and any realted API calls.
-      ├── resources     # Used to call our own server, do redirects, update sessions and so on.
+      ├── resources     # Does calls to database, redirects, updates sessions and so on.
 
 ### Authentication Strategies
 
@@ -121,7 +124,7 @@ stripe listen --forward-to localhost:3000/api/webhook
 
 ### Stripe Products
 
-From [Stripe Products](https://dashboard.stripe.com/test/products) Dashboard, create as many products as you want. Remember to update their API Keys from `.env` file, as well as their descriptions from `/modules/stripe/stripe-plans`.
+From [Stripe Products](https://dashboard.stripe.com/test/products) Dashboard, create as many products as you want. Remember to update their secret Keys from `.env` file, as well as their descriptions from `/modules/stripe/stripe-plans`.
 
 ### Production
 
