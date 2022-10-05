@@ -10,13 +10,13 @@
     <a href="https://twitter.com/DanielKanem">Twitter</a>
     <br/>
     <br/>
-    An Open Source Remix template that integrates Stripe Subscriptions, Social Authentication, Testing and a few more features. PostgreSQL version. Deploys to Fly.io
+    An open source Remix Template that integrates Stripe Subscriptions, Social Authentication and Testing. Javascript Supported. PostgreSQL version. Deploys to Fly.io
   </p>
 </p>
 
 ## Features
 
-Stripe PostgreSQL Stack has been built on top of [Barebones PostgreSQL Stack](https://github.com/dev-xo/barebones-postgres-stack), including all its base features.
+Stripe Stack has been built on top of [Barebones PostgreSQL Stack](https://github.com/dev-xo/barebones-postgres-stack), including all its base features.
 
 ### Base Features
 
