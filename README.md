@@ -53,11 +53,7 @@ npx create-remix@latest --template dev-xo/stripe-postgres-stack
 
 # Setups database: (Choose between the following 2 options)
 npm run docker || 'Manually set your Postgres database Keys into .env file.'
-```
 
-> **Note:** The npm script will complete while Docker sets up the container in the background. Ensure that Docker has finished and your container is running before proceeding.
-
-```sh
 # Starts dev server:
 npm run dev
 ```
