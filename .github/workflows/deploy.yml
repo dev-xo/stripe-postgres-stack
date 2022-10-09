@@ -17,7 +17,7 @@ jobs:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.10.1
 
-      - name: ⬇️ Checkout Repo
+      - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
 
       - name: ⎔ Setup Node
@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 16
 
-      - name: 📥 Download Deps
+      - name: 📥 Download Dependencies
         uses: bahmutov/npm-install@v1
         with:
           useLockFile: false
@@ -40,7 +40,7 @@ jobs:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.10.1
 
-      - name: ⬇️ Checkout Repo
+      - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
 
       - name: ⎔ Setup Node
@@ -48,7 +48,7 @@ jobs:
         with:
           node-version: 16
 
-      - name: 📥 Download Deps
+      - name: 📥 Download Dependencies
         uses: bahmutov/npm-install@v1
         with:
           useLockFile: false
@@ -63,7 +63,7 @@ jobs:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.10.1
 
-      - name: ⬇️ Checkout Repo
+      - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
 
       - name: ⎔ Setup Node
@@ -71,7 +71,7 @@ jobs:
         with:
           node-version: 16
 
-      - name: 📥 Download Deps
+      - name: 📥 Download Dependencies
         uses: bahmutov/npm-install@v1
         with:
           useLockFile: false
@@ -86,10 +86,10 @@ jobs:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.10.1
 
-      - name: ⬇️ Checkout Repo
+      - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
 
-      - name: 🏄 Copy test Env Vars
+      - name: 🏄 Copy Env Variables
         run: cp .env.example .env
 
       - name: ⎔ Setup Node
@@ -97,7 +97,7 @@ jobs:
         with:
           node-version: 16
 
-      - name: 📥 Download Deps
+      - name: 📥 Download Dependencies
         uses: bahmutov/npm-install@v1
         with:
           useLockFile: false
@@ -131,7 +131,7 @@ jobs:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.10.1
 
-      - name: ⬇️ Checkout Repo
+      - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
 
       - name: 👀 Read App Name
@@ -191,7 +191,7 @@ jobs:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.10.1
 
-      - name: ⬇️ Checkout Repo
+      - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
 
       - name: 👀 Read App Name
