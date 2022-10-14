@@ -30,6 +30,9 @@ CREATE TABLE "Subscription" (
 CREATE UNIQUE INDEX "User_providerId_key" ON "User"("providerId");
 
 -- CreateIndex
+CREATE UNIQUE INDEX "Subscription_providerId_key" ON "Subscription"("providerId");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "Subscription_customerId_key" ON "Subscription"("customerId");
 
 -- AddForeignKey
