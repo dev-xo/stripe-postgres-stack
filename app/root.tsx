@@ -14,8 +14,8 @@ import {
 	useLoaderData,
 } from '@remix-run/react'
 import { ThemeProvider, PreventFlashOnWrongTheme, useTheme } from 'remix-themes'
-import { themeSessionResolver } from '~/modules/theme/session.server'
-import { getGlobalEnvs } from './utils'
+import { themeSessionResolver } from '~/services/theme/session.server'
+import { getGlobalEnvs } from './utils/env.server'
 
 import tailwindStylesheetUrl from './styles/tailwind.css'
 
@@ -37,19 +37,19 @@ export const meta: MetaFunction = () => {
 		description:
 			'An Open Source Remix template that integrates Stripe Subscriptions, Social Authentication, Testing and a few more features. Deploys to Fly.io ',
 		keywords:
-			'remix,stripe,create-remix,remix-stack,typescript,postgresql,prisma,tailwindcss,fly.io',
+			'remix,stripe,create-remix,remix-stack,typescript,sqlite,prisma,tailwindcss,fly.io',
 		'og:title': 'Remix Stripe Stack',
 		'og:type': 'website',
-		'og:url': 'https://stripe-postgres-stack.fly.dev',
+		'og:url': 'https://stripe-stack.fly.dev',
 		'og:image':
-			'https://raw.githubusercontent.com/dev-xo/dev-xo/main/stripe-stack/assets/images/thumbnail-postgres-v3.png',
+			'https://raw.githubusercontent.com/dev-xo/dev-xo/main/stripe-stack/assets/images/thumbnail-sqlite-v3.png',
 		'og:card': 'summary_large_image',
 		'og:creator': '@DanielKanem',
-		'og:site': 'https://stripe-postgres-stack.fly.dev',
+		'og:site': 'https://stripe-stack.fly.dev',
 		'og:description':
 			'An Open Source Remix template that integrates Stripe Subscriptions, Social Authentication, Testing and a few more features. Deploys to Fly.io ',
 		'twitter:image':
-			'https://raw.githubusercontent.com/dev-xo/dev-xo/main/stripe-stack/assets/images/thumbnail-postgres-v3.png',
+			'https://raw.githubusercontent.com/dev-xo/dev-xo/main/stripe-stack/assets/images/thumbnail-sqlite-v3.png',
 		'twitter:card': 'summary_large_image',
 		'twitter:creator': '@DanielKanem',
 		'twitter:title': 'Remix Stripe Stack',

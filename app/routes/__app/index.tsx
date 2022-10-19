@@ -123,7 +123,7 @@ export default function AppIndexRoute() {
 				{/* Buttons. */}
 				<div className="flex flex-col items-center sm:flex-row">
 					<a
-						href="https://github.com/dev-xo/stripe-postgres-stack"
+						href="https://github.com/dev-xo/stripe-stack"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="flex h-16 w-full flex-row items-center rounded-xl border-[1px] border-gray-300 px-6 text-lg font-semibold
@@ -168,9 +168,9 @@ export default function AppIndexRoute() {
 						href: 'https://fly.io',
 					},
 					{
-						src: 'https://user-images.githubusercontent.com/1500684/158238105-e7279a0c-1640-40db-86b0-3d3a10aab824.svg',
-						alt: 'PostgreSQL',
-						href: 'https://www.postgresql.org/',
+						src: 'https://user-images.githubusercontent.com/1500684/157764395-137ec949-382c-43bd-a3c0-0cb8cb22e22d.svg',
+						alt: 'SQLite',
+						href: 'https://sqlite.org',
 					},
 					{
 						src: 'https://user-images.githubusercontent.com/1500684/157764484-ad64a21a-d7fb-47e3-8669-ec046da20c1f.svg',

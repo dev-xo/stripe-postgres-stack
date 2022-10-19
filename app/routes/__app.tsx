@@ -1,10 +1,10 @@
 import type { LoaderFunction } from '@remix-run/node'
-import type { AuthSession } from '~/modules/auth'
+import type { AuthSession } from '~/services/auth/session.server'
 import { redirect, json } from '@remix-run/node'
 import { Outlet, useLoaderData, useLocation } from '@remix-run/react'
-import { authenticator } from '~/modules/auth'
+import { authenticator } from '~/services/auth/config.server'
 import { useTheme } from 'remix-themes'
-import { Navigation } from '~/components'
+import { Navigation } from '~/components/Navigation'
 
 type LoaderData = {
 	user: Awaited<AuthSession> | null
@@ -30,6 +30,8 @@ export default function AppRoute() {
 	const [theme] = useTheme()
 	const location = useLocation()
 
+	console.log(user)
+
 	const setRadialGradientBasedOnTheme =
 		theme === 'light'
 			? location && location.pathname === '/'
@@ -51,7 +53,7 @@ export default function AppRoute() {
 			{user && (
 				<footer className="flex w-auto flex-row items-center justify-center py-4">
 					<a
-						href="https://github.com/dev-xo/stripe-postgres-stack"
+						href="https://github.com/dev-xo/stripe-stack"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="flex h-12 flex-row items-center text-lg font-semibold text-gray-800 opacity-100 transition hover:scale-105 hover:opacity-100 active:scale-100 dark:text-gray-300">
