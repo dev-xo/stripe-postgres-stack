@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.10.1
+        uses: styfle/cancel-workflow-action@0.11.0
 
       - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.10.1
+        uses: styfle/cancel-workflow-action@0.11.0
 
       - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.10.1
+        uses: styfle/cancel-workflow-action@0.11.0
 
       - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
@@ -85,7 +85,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.10.0
+        uses: styfle/cancel-workflow-action@0.11.0
 
       - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
@@ -130,7 +130,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.10.1
+        uses: styfle/cancel-workflow-action@0.11.0
 
       - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
@@ -190,7 +190,7 @@ jobs:
 
     steps:
       - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.10.1
+        uses: styfle/cancel-workflow-action@0.11.0
 
       - name: ⬇️ Checkout Repository
         uses: actions/checkout@v3
