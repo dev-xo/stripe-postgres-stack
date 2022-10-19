@@ -39,7 +39,7 @@ Stripe Stack has been built on top of [Barebones PostgreSQL Stack](https://githu
 - [Stripe Subscriptions](https://stripe.com/docs/billing/subscriptions/overview) with support for [Multiple Plans](#), [Upgrade / Downgrade](https://stripe.com/docs/billing/subscriptions/change) and [Customer Portal.](https://stripe.com/docs/billing/subscriptions/integrating-customer-portal)
 - Partial Support for Javascript developers with continuous updates over time based on `remix.init`.
 
-### We've got a 🐘 [PostgreSQL](https://github.com/dev-xo/stripe-postgres-stack) version also.
+### We've got a 🐳 [SQLite](https://github.com/dev-xo/stripe-stack) version also.
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
