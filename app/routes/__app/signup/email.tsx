@@ -13,14 +13,14 @@ export const meta: MetaFunction = () => {
 	}
 }
 
-type LoaderData = {
-	formError: string
-}
-
 /**
  * Remix - Loader.
  * @required Template code.
  */
+type LoaderData = {
+	formError: string
+}
+
 export const loader: LoaderFunction = async ({ request }) => {
 	// Checks for Auth Session.
 	await authenticator.isAuthenticated(request, {
@@ -28,6 +28,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 	})
 
 	// Parses a Cookie and returns its associated Session.
+	// Used to get errors from Session.
 	const session = await getSession(request.headers.get('cookie'))
 	const error = session.get(authenticator.sessionErrorKey)
 
@@ -51,7 +52,7 @@ export default function SignupEmailRoute() {
 				{/* Communicates our backend if user is trying to signup, or login. */}
 				<input type="hidden" name="formType" value="signup" />
 
-				{/* Name Input */}
+				{/* Name Input. */}
 				<div>
 					<label className="font-semibold text-gray-800 dark:text-gray-100">
 						Name
@@ -62,7 +63,7 @@ export default function SignupEmailRoute() {
 						type="text"
 						required
 						className="flex h-16 w-full rounded-xl border-2 border-gray-500 bg-transparent
-              px-4 text-base font-semibold text-black transition dark:text-white"
+            px-4 text-base font-semibold text-black transition dark:text-white"
 					/>
 				</div>
 				<div className="mb-3" />
@@ -78,12 +79,12 @@ export default function SignupEmailRoute() {
 						type="email"
 						required
 						className="flex h-16 w-full rounded-xl border-2 border-gray-500 bg-transparent
-              px-4 text-base font-semibold text-black transition dark:text-white"
+            px-4 text-base font-semibold text-black transition dark:text-white"
 					/>
 				</div>
 				<div className="mb-3" />
 
-				{/* Password Input */}
+				{/* Password Input. */}
 				<div>
 					<label className="font-semibold text-gray-800 dark:text-gray-100">
 						Password
@@ -95,7 +96,7 @@ export default function SignupEmailRoute() {
 						autoComplete="current-password"
 						required
 						className="relative flex h-16 w-full rounded-xl border-2 border-gray-500 bg-transparent
-              px-4 text-base font-semibold text-black transition dark:text-white"
+            px-4 text-base font-semibold text-black transition dark:text-white"
 					/>
 				</div>
 				<div className="mb-3" />

@@ -102,7 +102,7 @@ export const action: ActionFunction = async ({ request, params }) => {
 
 	// Checks for User existence in database.
 	const dbUser = await getUserByEmailIncludingPassword(email)
-	if (!dbUser?.email || !dbUser.password) return redirect('/login')
+	if (!dbUser || !dbUser?.email || !dbUser.password) return redirect('/login')
 
 	// Resets User password.
 	await resetUserPassword(email, password)
@@ -123,7 +123,7 @@ export default function ResetPasswordRoute() {
 	return (
 		<div className="flex w-full max-w-md flex-col">
 			<fetcher.Form method="post">
-				{/* Password Input */}
+				{/* Password Input. */}
 				<div>
 					<label className="font-semibold text-gray-800 dark:text-gray-100">
 						Password
@@ -135,12 +135,12 @@ export default function ResetPasswordRoute() {
 						autoComplete="new-password"
 						required
 						className="flex h-16 w-full rounded-xl border-2 border-gray-500 bg-transparent
-              px-4 text-base font-semibold text-black transition dark:text-white"
+            px-4 text-base font-semibold text-black transition dark:text-white"
 					/>
 				</div>
 				<div className="mb-3" />
 
-				{/* Confirm Password Input */}
+				{/* Confirm Password Input. */}
 				<div>
 					<label className="font-semibold text-gray-800 dark:text-gray-100">
 						Confirm Password
@@ -152,7 +152,7 @@ export default function ResetPasswordRoute() {
 						autoComplete="current-password"
 						required
 						className="flex h-16 w-full rounded-xl border-2 border-gray-500 bg-transparent
-              px-4 text-base font-semibold text-black transition dark:text-white"
+            px-4 text-base font-semibold text-black transition dark:text-white"
 					/>
 				</div>
 				<div className="mb-3" />
